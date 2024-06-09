@@ -1,12 +1,14 @@
 import streamlit as st
 from PIL import Image
 from fastai.vision.all import *
-
 import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 
-learn = load_learner('real_ai.pkl')
+plt = platform.system()
+st.write(plt)  # just for debugging
+if plt == 'Linux':
+    pathlib.PosixPath = pathlib.WindowsPath
+
+learn = load_learner('real_ai.pkl', )
 
 # Function to check if image is AI-generated or real
 def check_image(image):
