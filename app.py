@@ -3,6 +3,9 @@ from PIL import Image
 from fastai.vision.all import *
 from pathlib import Path
 
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 learn = load_learner('real_ai.pkl')
 
