@@ -1,12 +1,11 @@
 import streamlit as st
 from PIL import Image
 from fastai.vision.all import *
-import pathlib
+from pathlib import posixpath
 
-plt = platform.system()
-st.write(plt)  # just for debugging
-if plt == 'Linux':
-    pathlib.PosixPath = pathlib.WindowsPath
+model_path = posixpath.join('real_ai.pkl')
+
+learn = load_learner(model_path)
 
 learn = load_learner('real_ai.pkl', )
 
