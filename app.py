@@ -3,9 +3,11 @@ from PIL import Image
 from io import BytesIO
 from fastai.vision.all import *
 import pathlib
-import sys 
+import os
 
-learner = load_model('model/real_ai.pkl')
+model_path = os.path.join('model', 'real_ai.pkl')
+
+learner = load_learner(model_path)
 
 # Function to check if image is AI-generated or real
 
