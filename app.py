@@ -3,9 +3,11 @@ from PIL import Image
 from io import BytesIO
 from fastai.vision.all import *
 import pathlib
+import sys 
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+if sys.platform == 'win32':
+    # Replace pathlib.PosixPath with pathlib.WindowsPath
+    pathlib.PosixPath = pathlib.WindowsPath
 
 learner = load_learner('model/real_ai.pkl')
 
