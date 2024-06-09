@@ -1,0 +1,8 @@
+streamlit
+fastai
+pandas
+seaborn 
+numpy
+sklearn 
+warnings
+pathlib
