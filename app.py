@@ -1,21 +1,16 @@
 import streamlit as st
 from PIL import Image
-from io import BytesIO
 from fastai.vision.all import *
-import pathlib
-import os
+from pathlib import Path
 
-model_path = os.path.join('model', 'real_ai.pkl')
 
-learner = load_learner(model_path)
+learn = load_learner('real_ai.pkl')
 
 # Function to check if image is AI-generated or real
-
-
 def check_image(image):
 
     img = image.resize((460, 460))
-    ans = learner.predict(img)
+    ans = learn.predict(img)
     return ans[0]
 
 # Streamlit UI
