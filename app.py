@@ -5,10 +5,6 @@ from fastai.vision.all import *
 import pathlib
 import sys 
 
-if sys.platform == 'win32':
-    # Replace pathlib.PosixPath with pathlib.WindowsPath
-    pathlib.PosixPath = pathlib.WindowsPath
-
 learner = load_learner('model/real_ai.pkl')
 
 # Function to check if image is AI-generated or real
