@@ -5,7 +5,7 @@ from fastai.vision.all import *
 import pathlib
 import sys 
 
-learner = load_learner('model/real_ai.pkl')
+learner = load_model('model/real_ai.pkl')
 
 # Function to check if image is AI-generated or real
 
