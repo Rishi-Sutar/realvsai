@@ -3,6 +3,6 @@ fastai
 pandas
 seaborn 
 numpy
-sklearn 
+scikit-learn
 warnings
 pathlib
