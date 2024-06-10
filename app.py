@@ -32,7 +32,7 @@ def main():
             st.write("")
             st.write("Classifying...")
             result = check_image(image)
-            st.write(f"The uploaded image is: {result}")
+            st.success(f"The uploaded image is: {result}")
 
 if __name__ == '__main__':
     main()
